@@ -30,6 +30,6 @@ More info about Kirby can be found at http://getkirby.com
 
 ****
 
-![Kirby - Download Monitor](kirby-download-monitor "Kirby - Download Monitor")
+![Kirby - Download Monitor](kirby-download-monitor.gif "Kirby - Download Monitor")
 
 *Version 1.0.0*
