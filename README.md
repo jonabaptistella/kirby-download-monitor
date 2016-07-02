@@ -10,7 +10,7 @@
 
 Kirby Download Monitor allows you to get more insights in your downloads;
 
-- Hide the downloadpatch for your assets.
+- Hide the downloadpath for your assets.
 - Monitor the hits for every download.
 - Get detailed logs for every download.
 - All downloads centralized in one place.
