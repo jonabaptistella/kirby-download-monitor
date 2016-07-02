@@ -31,7 +31,6 @@ More info about Kirby can be found at http://getkirby.com
 ###Important###
 
 - By default, the downloadspage is not *multi-langual*. If you have a *multi-langual set-up*, please change the name **\content\downloads\downloads.txt** manually to **\content\downloads\downloads.{language_code}.txt**
-- This plug-in uses the new *.yml* extension for the blueprints. If you still use the *.php* extension, please rename **\site\blueprints\downloads.yml** manually to **\sites\blueprints\downloads.php**
 
 ****
 
