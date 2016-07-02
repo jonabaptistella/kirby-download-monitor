@@ -27,12 +27,13 @@
 
     if ($download["download_id"] === $download_id) {
 
+        $download_valid = 1;
         $download_uri = "content/downloads/" . $download["download_source"];
         $download_uid = $download["download_id"];
         $download_src = $download["download_source"];
-        $download_valid = 1;
-        $download_force = $download["download_link"];
+        $download_force = $download["download_force"];
         $download_log = $download["download_log"];
+
       }
 
     endforeach;
@@ -41,7 +42,7 @@
 /* Download-ID is available, but not correct */
 /* ------------------------------------------------------------- */
 
-    if ($download_valid !== 1) {
+    if ($download_valid != 1) {
 
       $err = "<h1 class=\"error\">Error - no <span>valid</span> download #ID (<b>02</b>).</h1>";
 
@@ -81,7 +82,7 @@
             while(!flock($fp, LOCK_EX)) {
             }
 
-          include_once("site/fields/download/inc/blueprint.php");
+          include_once("site/fields/downloads/inc/blueprint.php");
 
           $logdata = $blueprint . $logdata;
 
@@ -122,7 +123,7 @@
 
 /* Don't force download */
 
-        if ($download_force !== 1) {
+        if ($download_force != 1) {
 
             header("Location: " . "../content/downloads/" . $download_src);
             exit();

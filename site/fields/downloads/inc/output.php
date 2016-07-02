@@ -70,6 +70,10 @@ if ($user = $site->user() && filter_input(INPUT_GET, "stats", FILTER_SANITIZE_UR
 
     endforeach;
 
+  if ($i < 1) {
+    echo "No downloads available";
+  }
+
   echo "</div>";
 
 /* ------------------------------------------------------------- */

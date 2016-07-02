@@ -9,7 +9,7 @@ fields:
     readonly: true
 
   download:
-    type: download
+    type: downloads
 
   download_info:
       label: Download Monitor
