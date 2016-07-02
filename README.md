@@ -6,7 +6,7 @@
 
 ****
 
-### What is it?
+###What is it?###
 
 Kirby Download Monitor allows you to get more insights in your downloads;
 
@@ -19,7 +19,7 @@ Kirby Download Monitor allows you to get more insights in your downloads;
 
 More info about Kirby can be found at http://getkirby.com
 
-##Installation##
+###Installation###
 
 - Download the .zip and extract it to the root of your site.
 - Several directories will be created; be carefull not to overwrite existing ones.
@@ -28,7 +28,7 @@ More info about Kirby can be found at http://getkirby.com
 - When visiting the page from the dashboard, all the detailed stats are shown.
 - Remember; only registered / logged-in users have access to these stats.
 
-##Important##
+###Important###
 
 - By default, the downloadspage is not multi-langual. If you have a multi-langual set-up, please change the name **\content\downloads\downloads.txt** manually to **\content\downloads\downloads.{language_code}.txt**
 - This plug-in uses the new *.yml* extension for the blueprints. If you still use the *.php* extension, please rename **\site\blueprints\downloads.yml** manually to **\sites\blueprints\downloads.php**
