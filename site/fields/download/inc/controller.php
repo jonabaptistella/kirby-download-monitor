@@ -1,6 +1,5 @@
 <?php
 
-
   global $download_id;
   global $download_valid;
   global $err;
