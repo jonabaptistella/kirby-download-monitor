@@ -25,6 +25,11 @@ if ($user = $site->user() && filter_input(INPUT_GET, "stats", FILTER_SANITIZE_UR
 
           $count = file_get_contents($counter);
 
+/* Correct the initial count */
+
+          if($count < $download["download_cnt"]) {
+            $count = $download["download_cnt"] . " <span class=\"corrected\">(corrected)</span>";
+          }
         }
 
       echo "<ul><li><h3>" . $download["download_id"] . " <span title=\"number of downloads\">#" . $count . "</span></h3></li>";

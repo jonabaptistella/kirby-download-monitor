@@ -85,6 +85,12 @@ li a {
   cursor: pointer;
 }
 
+.corrected {
+  font-size: .6em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 textarea.input {
   height: 20em;
   font-family: monospace;

@@ -36,6 +36,12 @@ return array(
 
           $count = file_get_contents($counter);
 
+/* Correct the initial count */
+
+            if($count < $download["download_cnt"]) {
+              $count = $download["download_cnt"] . " <span class=\"corrected\">(corrected)</span>";
+            }
+
         }
 
     $output .= "<tr><td>" . $download["download_id"] . "</td>";
@@ -62,6 +68,12 @@ return array(
               #downloads-widget table em {
                 color: #bbb;
                 font-style: normal;
+              }
+
+              #downloads-widget .corrected {
+                font-size: .75em;
+                font-weight: normal;
+                text-transform: uppercase;
               }
             </style>".
             "<table class=\"downloads\">" .

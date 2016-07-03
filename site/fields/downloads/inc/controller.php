@@ -106,7 +106,13 @@
         } else {
 
           $count = file_get_contents($counter);
+
+/* Correct the initial count */
+
+        if($count < $download["download_cnt"]) {
+          $count = $download["download_cnt"];
         }
+      }
 
       $fp = fopen($counter, "r+");
 

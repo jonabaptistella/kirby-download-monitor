@@ -7,13 +7,43 @@
   $file = filter_input(INPUT_GET, "id", FILTER_SANITIZE_URL);
   $down = $path . $file;
 
-if (!file_exists($down)) {
+/* Check if file exists at all */
 
-  header("HTTP/1.1 404 Not Found");
-  header("Location: /");
-  exit();
+  if (!file_exists($down)) {
 
-} else {
+    header("HTTP/1.1 404 Not Found");
+    header("Location: /");
+    exit();
+
+  } else {
+
+/* Check if download-list exists (also multi-langual, like 'downloads.en.txt' */
+
+    $check = 0;
+
+      foreach (glob($path . "downloads*.txt") as $list) {
+
+        $list = file_get_contents($list);
+
+        if (strpos($list, $file) !== false) {
+          $check++;
+        }
+
+      }
+
+/* No entries found */
+
+    if ($check < 1) {
+
+      header("HTTP/1.1 404 Not Found");
+      header("Location: /");
+      exit();
+
+    }
+
+  }
+
+/* All is okay, continue to download */
 
   $quoted = sprintf("\"%s\"", addcslashes(basename($down), "\"\\"));
   $size = filesize($down);
@@ -29,6 +59,6 @@ if (!file_exists($down)) {
   header("Content-disposition: attachment; filename=" . $quoted);
   readfile($down);
 
-}
+  exit();
 
 ?>
