@@ -34,7 +34,7 @@ fields:
     fields:
 
       download_id:
-        label: "#ID"
+        label: "Download #ID"
         type: text
         required: true
         width: 1/3
@@ -42,16 +42,16 @@ fields:
         help: "An unique download #ID"
 
       download_cnt:
-        label: Start
+        label: Initial count
         type: number
-        required: true
+        required: false
         default: 0
         width: 1/3
         icon: calculator
         help: The initial count
 
       download_source:
-        label: File
+        label: Download file
         type: select
         options: files
         required: true
@@ -59,13 +59,13 @@ fields:
         help: The file to download
 
       download_date:
-        label: Date
+        label: Startdate
         type:  date
         width: 1/3
         help: Set the startdate
 
       download_force:
-        label: Force
+        label: Force dowload?
         type: checkbox
         text: Force
         width: 1/3
@@ -73,7 +73,7 @@ fields:
         help: Don't open in browser
 
       download_log:
-        label: Log
+        label: Log downloads?
         type: checkbox
         text: Logfile
         width: 1/3
@@ -81,7 +81,7 @@ fields:
         help: Save a detailed logfile
 
       download_link:
-        label: Link
+        label: Downloadlink
         type: text
         icon: link
         placeholder: www.yoursite.com
