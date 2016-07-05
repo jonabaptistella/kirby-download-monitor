@@ -8,7 +8,7 @@ $.fn.downloadsfield = function() {
 /* Hide some stuff */
 /* ------------------------------------------------------------- */
 
-  $(".field-name-title, .sidebar-list:eq(0) li:not(.sidebar-list li:eq(0))").css({display: "none"});
+  $(".field-name-title, .sidebar h2:eq(0), .sidebar-list:eq(0)").css({display: "none"});
 
 /* ------------------------------------------------------------- */
 /* Create the dynamic download-link */

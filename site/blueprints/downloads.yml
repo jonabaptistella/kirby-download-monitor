@@ -1,8 +1,15 @@
 title: Downloads
 pages: false
 files: true
-fields:
 
+options:
+  preview: false
+  status: false
+  template: false
+  url: false
+  delete: false
+
+fields:
   title:
     label: Downloads
     type:  text
