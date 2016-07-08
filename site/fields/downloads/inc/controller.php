@@ -27,14 +27,14 @@
 
     if ($download["download_id"] === $download_id) {
 
-        $download_valid = 1;
-        $download_uri = "content/downloads/" . $download["download_source"];
-        $download_uid = $download["download_id"];
-        $download_src = $download["download_source"];
-        $download_force = $download["download_force"];
-        $download_log = $download["download_log"];
+      $download_valid = 1;
+      $download_src = $download["download_source"];
+      $download_uri = "content/downloads/" . $download_src;
+      $download_uid = $download["download_id"];
+      $download_force = $download["download_force"];
+      $download_log = $download["download_log"];
 
-      }
+    }
 
     endforeach;
 
@@ -75,22 +75,23 @@
           } else {
 
             $logdata = file_get_contents($logfile);
+
           }
 
-          $fp = fopen($logfile, "r+");
+        $fp = fopen($logfile, "r+");
 
-            while(!flock($fp, LOCK_EX)) {
-            }
+          while(!flock($fp, LOCK_EX)) {
+          }
 
-          include_once("site/fields/downloads/inc/blueprint.php");
+        include_once("site/fields/downloads/inc/blueprint.php");
 
-          $logdata = $blueprint . $logdata;
+        $logdata = $blueprint . $logdata;
 
-          ftruncate($fp, 0);
-          fwrite($fp, $logdata);
-          fflush($fp);
-          flock($fp, LOCK_UN);
-          fclose($fp);
+        ftruncate($fp, 0);
+        fwrite($fp, $logdata);
+        fflush($fp);
+        flock($fp, LOCK_UN);
+        fclose($fp);
 
       }
 
@@ -129,10 +130,12 @@
 
 /* Don't force download */
 
+        $down = "../" . $download_uri;
+
         if ($download_force != 1) {
 
-            header("Location: " . "../content/downloads/" . $download_src);
-            exit();
+          header("Location: " . $down);
+          exit();
 
         } else {
 
@@ -141,6 +144,7 @@
 
           header("Location: ../download/?id=" . $download_src);
           exit();
+
         }
 
       }
