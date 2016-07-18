@@ -3,13 +3,6 @@ pages: false
 files: true
 icon: download
 
-options:
-  preview: false
-  status: false
-  template: false
-  url: false
-  delete: false
-
 fields:
   title:
     label: Downloads

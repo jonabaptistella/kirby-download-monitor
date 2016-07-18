@@ -142,7 +142,7 @@
 /* Force download */
 /* Ref. https://forum.getkirby.com/t/4581 */
 
-          header("Location: ../download/?id=" . $download_src);
+          $page->file($download_src) -> download($download_src);
           exit();
 
         }
