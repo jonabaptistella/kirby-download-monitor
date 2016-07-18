@@ -29,7 +29,7 @@ More info about Kirby can be found at http://getkirby.com
 ###Installation###
 
 - Download the .zip and extract it to the root of your site.
-- Don't know which files? Just use "/content", "/download" and "/site".
+- Don't know which files? Just use "/content" and "/site".
 - Several directories will be created; be carefull not to overwrite existing ones.
 - A new page is added; downloads.
 - From the new page, you can add / modify / delete all your downloads.
