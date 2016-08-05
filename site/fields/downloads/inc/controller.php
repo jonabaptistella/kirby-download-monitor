@@ -44,6 +44,7 @@
 
     if ($download_valid != 1) {
 
+      header("HTTP/1.0 404 Not Found");
       $err = "<h1 class=\"error\">Error - no <span>valid</span> download #ID (<b>02</b>).</h1>";
 
     } else {
@@ -54,6 +55,7 @@
 
       if (!file_exists($download_uri)) {
 
+        header("HTTP/1.0 404 Not Found");
         $err = "<h1 class=\"error\">Error - file <span>does not</span> exist (<b>03</b>).</h1>";
 
       } else {
@@ -157,6 +159,7 @@
 /* No download-ID is available at all */
 /* ------------------------------------------------------------- */
 
+    header("HTTP/1.0 404 Not Found");
     $err = "<h1 class=\"error\">Error - no download #ID (<b>01</b>).</h1>";
 
   }
