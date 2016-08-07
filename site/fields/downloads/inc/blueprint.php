@@ -24,7 +24,8 @@ $server = gethostname();
 $domain = $_SERVER["HTTP_HOST"]." / ".$_SERVER["SERVER_NAME"];
 $ip = $_SERVER["REMOTE_ADDR"];
 $system = $_SERVER["HTTP_USER_AGENT"];
-$lang_code = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
+$lang_code = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $_SERVER["HTTP_ACCEPT_LANGUAGE"] : "";
+
 
   if(strpos($lang_code,",") > 1) {
     $lang_code = substr($lang_code,0,strpos($lang_code,","));
