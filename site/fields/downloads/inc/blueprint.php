@@ -76,7 +76,7 @@ $blueprint .= "Date       : " . $date . chr(10);
 $blueprint .= "IP-address : " . $ip . chr(10);
 
   if($remote_access) {
-    $blueprint .= "Map        : https://www.google.nl/maps/place//@" . $lat . "," . $long . ",14z/" . chr(10);
+    $blueprint .= "Map        : https://www.google.com/maps/place//@" . $lat . "," . $long . ",14z/" . chr(10);
     $blueprint .= "Country    : " . $country . chr(10);
     $blueprint .= "Region     : " . $region . chr(10);
     $blueprint .= "City       : " . $city . chr(10);
